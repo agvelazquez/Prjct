@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import os 
 
-os.chdir('D:\\Sistema\\Santiago\\Desktop\\Stage\\Demo\\DATA\\Tensile\\Strain and Stress Data')
+os.chdir('XXXX')
 
 #%% Parameters
 time_selected = str(1) #pick the time at which is made the analysis 
@@ -26,19 +26,19 @@ for i in archivos:
 
 #%% Strain at time_selected
 
-strain_time = strain[1]['Gauss Point']
+strain_time = strain[1]['XX']
 for i in archivos:
     time = strain[i][time_selected]
     strain_time = pd.concat([strain_time,time], axis = 1, ignore_index = True)
     
 for i in range(1,7,1):
-    strain_time = strain_time.rename(columns={i:'Strain_E'+str(i)})
+    strain_time = strain_time.rename(columns={i:'XXXX'+str(i)})
     
-strain_time = strain_time.rename(columns={0:'Gauss Point'})
+strain_time = strain_time.rename(columns={0:'XXXX'})
 
 #%% Stress at time_selected
  
-stress_time = stress[1]['Gauss Point']
+stress_time = stress[1]['XXXX']
 for i in archivos:
     time = stress[i][time_selected]
     stress_time = pd.concat([stress_time,time], axis = 1, ignore_index = True)
