@@ -7,6 +7,8 @@ Created on Sun Oct 22 16:44:45 2017
 import pandas as pd
 import numpy as np
 import os 
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 os.chdir('XXXX')
 
