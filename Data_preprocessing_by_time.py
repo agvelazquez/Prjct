@@ -54,3 +54,16 @@ all_components_at_time = pd.concat([strain_time,stress_time], axis = 1)
 #%% Data Saving
 filename = 'all_components_at_time_'+str(time_selected)+'.csv'
 all_components_at_time.to_csv(filename)
+
+
+#%% PLoting Stress vs time 
+# It was selected randomly the first point 
+# It was selected to plot the first coordinate because it is possible to differentiate the elastic from the plastic part
+a = stress[1].iloc[[0]]
+a = a.iloc[0,1:]
+plt.figure()
+a.plot(xticks = np.arange(1,108,4))
+plt.xlabel('Time')
+plt.ylabel('Stress S1')
+plt.title('Simple Tensile Test, Stress S1, GP = 625')
+plt.xticks(rotation=0)
